@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block contenido %} 
+
+    <div class="container mb-3 card column">
+
+        <h1>Solo personal autorizado</h1>
+        <br>
+
+        <h2>Inicio de Sesión requerido</h2>
+        <br>
+
+        <form  method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="usuario">Usuario
+                <input type="text" name="username">
+            </label>
+
+        </div>
+
+        <div class="mb-3">
+            <label for="pass">Constraseña
+                <input type="password" name="password">
+            </label>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+
+        </form>
+
+
+    </div>
+
+{% endblock%}

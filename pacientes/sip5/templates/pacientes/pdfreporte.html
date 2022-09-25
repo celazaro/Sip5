@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Reporte pdf</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style type="text/css">
+    @page {
+        size:landscape;
+        margin-top: 50px;
+        margin-left: 30px;
+        margin-right: 10px;
+        
+    }
+    html{
+        font-size: 8px;
+        
+    }
+
+  </style>
+  
+</head>
+<body >
+
+<div class="container">
+  
+    <div class="row">
+      <div class="col-sm w-25 p-3">
+        <img src="static/assets/logo-notti.jpg" alt="" >
+      </div>
+      <div class="col-sm">
+        <h1>Servicio de Nutrición Infantil</h1> 
+        <h2>Pacientes SIP 5</h2>
+
+      </div>
+      <div class="col-sm">
+        
+        <h3>Nutricionista: {{name_nutri}}  -  Fecha:....../....../...... </h3>
+        
+      </div>
+    
+  </div>
+  
+  <div>
+    <table class="table table-bordered">
+        <thead >
+            <tr>
+                
+                <th scope="col" class="align-middle text-center"><h5>Hab/Cama</h5></th>
+                
+                <th scope="col" class="align-middle text-center"><h5>Apellido y Nombre</h5> </th>
+                
+                <th scope="col" class="align-middle text-center"><h5>Diagnóstico</h5> </th>
+                
+                <th scope="col" class="align-middle text-center"><h5>Observaciones</h5> </th>
+                <th scope="col" class="align-middle text-center"><h5>Desayuno</h5> </th>
+                <th scope="col" class="align-middle text-center"><h5>Colación Mañana</h5> </th>
+                <th scope="col" class="align-middle text-center"><h5>Almuerzo</h5> </th> 
+                <th scope="col" class="align-middle text-center"><h5>Merienda</h5> </th>
+                <th scope="col" class="align-middle text-center"><h5>Colación Tarde</h5> </th>
+                <th scope="col" class="align-middle text-center"><h5>Cena</h5> </th>
+                <th scope="col" class="align-middle text-center"><h5>Postre</h5> </th>
+                <th scope="col" class="align-middle text-center"><h5>Comida Familiar</h5> </th>
+                
+                
+                
+            </tr>
+        </thead>
+        <tbody>
+
+            {% for paci in pacientes %}
+            <tr >
+                
+                <td >{{paci.habitacion}}/{{paci.cama}}</td>
+                
+                <td > {{paci.apellido}}, {{paci.nombre}}</td>
+                
+                <td >{{paci.diagnostico}}</td>
+                
+                <td>{{paci.observaciones}}</td>
+                <td>{{paci.desayuno}}</td>
+                <td>{{paci.colacion_maniana}}</td>
+                <td>{{paci.almuerzo}}</td>
+                <td>{{paci.merienda}}</td>
+                <td>{{paci.colacion_tarde}}</td>
+                <td>{{paci.cena}}</td>
+                <td>{{paci.postre}}</td>
+                <td>{{paci.comida_familiar}}</td>
+                
+                
+            </tr>
+
+            {% endfor %}
+            
+        </tbody>
+    </table>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+@page {
+    size: a4 portrait;
+    margin-right: 20px;
+    margin-left: 30px;
+
+    
+    
+}
+
+
+.cla-alineacion {
+    
+    padding-left: 3px;
+    padding-top: 3px;
+    
+    
+    
+}
+
+.cla-centrado {
+    
+    text-align: center;
+    
+    
+}
